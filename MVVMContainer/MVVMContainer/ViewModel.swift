@@ -25,12 +25,18 @@ class ViewModel: NSObject, NSCoding {
     
     func fetchImageOfDay(then completion: @escaping (Result) -> Void) {
 
-        guard let url = URL(string: type(of: self).nasaAPODURL) else { return }
+        guard let url = URL(string: type(of: self).nasaAPODURL) else {
+            completion(.failed)
+            return
+        }
 
         let sesion = URLSession.init(configuration: .ephemeral)
         let taskCompletionHandler: (Data?, URLResponse?, Error?) -> Void  = {data, response, error in
 
-            guard let data = data, error == nil else { return  }
+            guard let data = data, error == nil else {
+                completion(.failed)
+                return
+            }
             do {
                 let picOfTheDay = try JSONDecoder().decode(AstronomyPictureOfTheDay.self, from: data)
                 completion(.success(picOfTheDay))
