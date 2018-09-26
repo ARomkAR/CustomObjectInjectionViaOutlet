@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MVVMContainer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4E3-gX-W49">
+                                <rect key="frame" x="16" y="20" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.75686274509999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vsW-Rr-45r">
+                                <rect key="frame" x="16" y="48.5" width="343" height="394.5"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPA-xj-eUR">
+                                <rect key="frame" x="16" y="451" width="343" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="ogD-06-qpo"/>
+                                </constraints>
+                                <color key="textColor" red="0.20000000000000001" green="0.75686274509999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4E3-gX-W49" secondAttribute="trailing" constant="16" id="5qT-5A-tmy"/>
+                            <constraint firstItem="aPA-xj-eUR" firstAttribute="top" secondItem="vsW-Rr-45r" secondAttribute="bottom" constant="8" id="CIf-j4-mTE"/>
+                            <constraint firstItem="4E3-gX-W49" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="NqN-Ps-cub"/>
+                            <constraint firstItem="4E3-gX-W49" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Zqw-0T-QJS"/>
+                            <constraint firstItem="aPA-xj-eUR" firstAttribute="trailing" secondItem="4E3-gX-W49" secondAttribute="trailing" id="ftg-Pu-N2R"/>
+                            <constraint firstItem="aPA-xj-eUR" firstAttribute="leading" secondItem="4E3-gX-W49" secondAttribute="leading" id="jdf-8A-ac7"/>
+                            <constraint firstItem="vsW-Rr-45r" firstAttribute="top" secondItem="4E3-gX-W49" secondAttribute="bottom" constant="8" id="nLk-jG-YRx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aPA-xj-eUR" secondAttribute="bottom" constant="16" id="ufr-Wm-OEK"/>
+                            <constraint firstItem="vsW-Rr-45r" firstAttribute="trailing" secondItem="4E3-gX-W49" secondAttribute="trailing" id="vWN-sm-38o"/>
+                            <constraint firstItem="vsW-Rr-45r" firstAttribute="leading" secondItem="4E3-gX-W49" secondAttribute="leading" id="zs9-Bm-mvF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageDecription" destination="aPA-xj-eUR" id="wxL-W3-SwL"/>
+                        <outlet property="imageView" destination="vsW-Rr-45r" id="DoU-BE-Zk4"/>
+                        <outlet property="picTitle" destination="4E3-gX-W49" id="aIy-9D-RAW"/>
+                        <outlet property="viewModel" destination="ufm-aN-OjC" id="z46-m6-JIy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="ufm-aN-OjC" customClass="ViewModel" customModule="MVVMContainer" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
