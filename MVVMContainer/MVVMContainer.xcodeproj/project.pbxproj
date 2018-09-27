@@ -13,8 +13,7 @@
 		E5258CC6215B4F560087DA4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5258CC5215B4F560087DA4C /* Assets.xcassets */; };
 		E5258CC9215B4F560087DA4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5258CC7215B4F560087DA4C /* LaunchScreen.storyboard */; };
 		E5258CD4215B4F560087DA4C /* MVVMContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5258CD3215B4F560087DA4C /* MVVMContainerTests.swift */; };
-		E5258CDF215B52B20087DA4C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5258CDE215B52B20087DA4C /* ViewModel.swift */; };
-		E5258CE1215B53540087DA4C /* AstronomyPictureOfTheDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5258CE0215B53540087DA4C /* AstronomyPictureOfTheDay.swift */; };
+		E5258CE3215C829D0087DA4C /* TableViewDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5258CE2215C829D0087DA4C /* TableViewDataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +37,7 @@
 		E5258CCF215B4F560087DA4C /* MVVMContainerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMContainerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5258CD3215B4F560087DA4C /* MVVMContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMContainerTests.swift; sourceTree = "<group>"; };
 		E5258CD5215B4F560087DA4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E5258CDE215B52B20087DA4C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		E5258CE0215B53540087DA4C /* AstronomyPictureOfTheDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPictureOfTheDay.swift; sourceTree = "<group>"; };
+		E5258CE2215C829D0087DA4C /* TableViewDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +85,7 @@
 				E5258CC5215B4F560087DA4C /* Assets.xcassets */,
 				E5258CC7215B4F560087DA4C /* LaunchScreen.storyboard */,
 				E5258CCA215B4F560087DA4C /* Info.plist */,
-				E5258CDE215B52B20087DA4C /* ViewModel.swift */,
-				E5258CE0215B53540087DA4C /* AstronomyPictureOfTheDay.swift */,
+				E5258CE2215C829D0087DA4C /* TableViewDataController.swift */,
 			);
 			path = MVVMContainer;
 			sourceTree = "<group>";
@@ -204,8 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5258CC1215B4F550087DA4C /* ViewController.swift in Sources */,
-				E5258CE1215B53540087DA4C /* AstronomyPictureOfTheDay.swift in Sources */,
-				E5258CDF215B52B20087DA4C /* ViewModel.swift in Sources */,
+				E5258CE3215C829D0087DA4C /* TableViewDataController.swift in Sources */,
 				E5258CBF215B4F550087DA4C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,8 +364,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MUE3C3QG36;
 				INFOPLIST_FILE = MVVMContainer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -387,8 +384,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MUE3C3QG36;
 				INFOPLIST_FILE = MVVMContainer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
