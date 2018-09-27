@@ -10,7 +10,7 @@ import UIKit
 
 class TableViewDataController: NSObject {
 
-    @IBOutlet weak var tabelView: UITableView! {
+    @IBOutlet var tabelView: UITableView! {
         didSet {
             self.tabelView.register(UITableViewCell.self, forCellReuseIdentifier: "CellIdentfier")
         }
@@ -35,6 +35,12 @@ extension TableViewDataController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
+
+        guard
+            let rootViewController = UIApplication.shared.keyWindow?.rootViewController
+        else { return }
+        let alert = UIAlertController(title: "", message: "Selected \(indexPath)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        rootViewController.present(alert, animated: true, completion: nil)
     }
 }
